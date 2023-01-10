@@ -4,6 +4,10 @@ import "./Phone.css";
 import "/node_modules/flag-icons/css/flag-icons.min.css";
 
 function Phone() {
+  const countries = [
+    { id: 1, country: "US", flag: "fi fi-us", label: "🇺🇸 United States (+1)" },
+    { id: 2, country: "GH", flag: "fi fi-gh", label: "🇬🇭 GHA (+233)" },
+  ];
   return (
     <div>
       <span className="step">Step 1 of 6</span>
@@ -11,10 +15,17 @@ function Phone() {
       <div className="sub-title">
         Select your country and enter your phone number
       </div>
-      <div className="phone-container">
+      {/* <div className="phone-container">
         <span class="fi fi-gh"></span> <span class="fi fi-us"></span>
-      </div>
-      <CustomInput />
+      </div> */}
+      {/* <CustomInput placeholder="Code" /> */}
+      <select>
+        {countries.map(({ id, label, flag }) => (
+          <option value="fruit" key={id}>
+            {label}
+          </option>
+        ))}
+      </select>
     </div>
   );
 }
