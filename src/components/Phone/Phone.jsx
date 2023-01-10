@@ -6,7 +6,7 @@ import "/node_modules/flag-icons/css/flag-icons.min.css";
 function Phone() {
   const countries = [
     { id: 1, country: "US", flag: "fi fi-us", label: "🇺🇸 United States (+1)" },
-    { id: 2, country: "GH", flag: "fi fi-gh", label: "🇬🇭 GHA (+233)" },
+    { id: 2, country: "GH", flag: "fi fi-gh", label: "🇬🇭 Ghana (+233)" },
   ];
   return (
     <div>
@@ -19,9 +19,9 @@ function Phone() {
         <span class="fi fi-gh"></span> <span class="fi fi-us"></span>
       </div> */}
       {/* <CustomInput placeholder="Code" /> */}
-      <select>
+      <select className="dropdown-input">
         {countries.map(({ id, label, flag }) => (
-          <option value="fruit" key={id}>
+          <option value={label} key={id}>
             {label}
           </option>
         ))}

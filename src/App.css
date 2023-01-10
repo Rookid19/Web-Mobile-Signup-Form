@@ -17,10 +17,10 @@
   align-self: center;
   height: 100%;
   margin: auto;
-  width: 350px;
+  width: 300px;
   overflow: hidden;
   /* background-color: var(--credet-white); */
-  background-color: red;
+  /* background-color: red; */
   padding-inline: 30px;
 }
 .step {
@@ -29,7 +29,6 @@
 .title {
   font-size: 20px;
   font-family: "polysans-medium";
- 
 }
 .custom-input {
   box-sizing: border-box;
@@ -42,3 +41,15 @@
   font-family: "polysans-regular";
   padding-left: 20px;
 }
+.dropdown-input {
+  height: 33px;
+  background-color: var(--credet-light-grey);
+  border: none;
+  border-radius: 20px;
+  font-size: 13px;
+  font-family: "polysans-regular";
+  padding-inline: 15px;
+  border-right: 15px solid transparent;
+  outline: none;
+}
+
