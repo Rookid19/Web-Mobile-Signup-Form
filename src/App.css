@@ -1,9 +1,17 @@
+:root {
+  --credet-green: #25d366;
+  --cedet-grey:#5c5e62;
+  --credet-light-grey: #f5f7f9;
+}
 .App {
   display: flex;
   align-self: center;
   height: 100%;
   margin: auto;
   width: 300px;
-  background-color: red;
+  background-color: var(--credet-light-grey);
   /* padding-inline: 30px; */
+}
+.step {
+  color: blue;
 }
