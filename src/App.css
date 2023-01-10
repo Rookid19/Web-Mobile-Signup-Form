@@ -1,7 +1,8 @@
 :root {
   --credet-green: #25d366;
-  --cedet-grey:#5c5e62;
+  --cedet-grey: #5c5e62;
   --credet-light-grey: #f5f7f9;
+  --credet-black: #020202;
 }
 .App {
   display: flex;
