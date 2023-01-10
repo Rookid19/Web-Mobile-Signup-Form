@@ -16,3 +16,7 @@
 .step {
   color: blue;
 }
+.title {
+  font-size: 50px;
+  font-family: "polysans-regular";
+}

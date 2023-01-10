@@ -1,13 +1,24 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  -moz-osx-font-smoothing: grayscale; */
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@font-face {
+  font-family: "polysans-regular";
+  src: local("polysans-regular"),
+    url(./assets/fonts/Polysans-Regular.ttf) format("woff");
+}
+@font-face {
+  font-family: "polysans-medium";
+  src: local("polysans-medium"),
+    url(./assets/fonts/Polysans-Medium.ttf) format("woff");
+}
+@font-face {
+  font-family: "polysans-bold";
+  src: local("polysans-bold"),
+    url(./assets/fonts/Polysans-Bold.ttf) format("woff");
 }
