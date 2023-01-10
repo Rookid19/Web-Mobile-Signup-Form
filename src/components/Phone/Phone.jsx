@@ -1,4 +1,5 @@
 import React from "react";
+import CustomInput from "../CustomInput/CustomInput";
 import "./Phone.css";
 import "/node_modules/flag-icons/css/flag-icons.min.css";
 
@@ -11,8 +12,9 @@ function Phone() {
         Select your country and enter your phone number
       </div>
       <div className="phone-container">
-      <span class="fi fi-gh"></span> <span class="fi fi-us"></span>
+        <span class="fi fi-gh"></span> <span class="fi fi-us"></span>
       </div>
+      <CustomInput />
     </div>
   );
 }

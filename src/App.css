@@ -3,6 +3,7 @@
   --cedet-grey: #5c5e62;
   --credet-light-grey: #f5f7f9;
   --credet-black: #020202;
+  --credet-white: #ffffff
 }
 .App {
   display: flex;
@@ -10,13 +11,20 @@
   height: 100%;
   margin: auto;
   width: 300px;
-  background-color: var(--credet-light-grey);
-  /* padding-inline: 30px; */
+  background-color: var(--credet-white);
+  padding-inline: 30px;
 }
 .step {
   color: blue;
 }
 .title {
-  font-size: 50px;
-  font-family: "polysans-regular";
+  font-size: 28px;
+  font-family: "polysans-medium";
+}
+.custom-input{
+  width: 300px;
+  height: 33px;
+  background-color: var(--credet-light-grey);
+  border: none;
+  border-radius: 5px;
 }
