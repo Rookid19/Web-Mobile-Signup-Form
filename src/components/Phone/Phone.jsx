@@ -15,10 +15,6 @@ function Phone() {
       <div className="sub-title">
         Select your country and enter your phone number
       </div>
-      {/* <div className="phone-container">
-        <span class="fi fi-gh"></span> <span class="fi fi-us"></span>
-      </div> */}
-      {/* <CustomInput placeholder="Code" /> */}
       <select className="dropdown-input">
         {countries.map(({ id, label, flag }) => (
           <option value={label} key={id}>
@@ -26,8 +22,10 @@ function Phone() {
           </option>
         ))}
       </select>
+      <CustomInput autoFocus type="phone"/>
     </div>
   );
 }
 
 export default Phone;
+// span class="fi fi-gh"></span> <span class="fi fi-us"></span>
