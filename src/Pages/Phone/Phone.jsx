@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import useForm from "../../hooks/useForm";
-import CustomButton from "../CustomButton/CustomButton";
-import CustomInput from "../CustomInput/CustomInput";
+import CustomButton from "../../components/CustomButton/CustomButton";
+import CustomInput from "../../components/CustomInput/CustomInput";
 import "./Phone.css";
 
 function Phone() {
