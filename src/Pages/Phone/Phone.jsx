@@ -3,10 +3,13 @@ import useForm from "../../hooks/useForm";
 import CustomButton from "../../components/CustomButton/CustomButton";
 import CustomInput from "../../components/CustomInput/CustomInput";
 import "./Phone.css";
+import useAuth from "../../hooks/useAuth";
 
 function Phone() {
   //declaring variables
   const [countryCode, setCountryCode] = useState("+1");
+
+  const { setPageIndex } = useAuth();
 
   // countries
   const countries = [
@@ -70,7 +73,7 @@ function Phone() {
         By continuing, I understand and agree to Credet’s <u>Privacy Policy</u>{" "}
         and <u>Terms of Use</u> for creating a Credet Account
       </div>
-      <CustomButton />
+      <CustomButton onClick={() => setPageIndex(2)} />
     </div>
   );
 }

@@ -1,7 +1,11 @@
 import React from "react";
 
-function CustomButton() {
-  return <button className="button">Continue</button>;
+function CustomButton({ ...props }) {
+  return (
+    <button className="button" {...props}>
+      Continue
+    </button>
+  );
 }
 
 export default CustomButton;
