@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useState } from "react";
 
-const useForm = (validate) => {
+const useForm = () => {
   const [values, setValues] = useState({
     email: "",
     password: "",
@@ -11,14 +11,13 @@ const useForm = (validate) => {
   const [valid, setValid] = useState(null);
 
   //
-  useEffect(() => {
-    setErrors(validate(values));
-  }, [values, validate]);
+  //   useEffect(() => {
+  //     setErrors(validate(values));
+  //   }, [values, validate]);
 
   const handleOnchange = useCallback(
     (e) => {
       const { name, value } = e.target;
-
       setValues({
         ...values,
         [name]: value,
@@ -27,8 +26,18 @@ const useForm = (validate) => {
     [values]
   );
 
+  useEffect(() => {
+    if (values.phone[0] === "0") {
+      setValues({
+        ...values,
+        phone: "",
+      });
+    }
+  }, [values]);
+
   return {
     values,
+    setValues,
     errors,
     setErrors,
     valid,

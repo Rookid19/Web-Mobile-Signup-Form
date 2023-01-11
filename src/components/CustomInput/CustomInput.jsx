@@ -1,15 +1,16 @@
 import React from "react";
 
-function CustomInput({ placeholder, autoFocus, type }) {
+function CustomInput({ placeholder, type, label, ...props }) {
   return (
     <div>
-      <p>We send a verification</p>
+      <p>{label}</p>
       <input
+        {...props}
         className="custom-input"
-        autoFocus={autoFocus}
         placeholder={placeholder}
         style={{
           backgroundColor: type === "phone" && "white",
+          paddingInline: type === "phone" ? 5 : 15,
         }}
       />
     </div>

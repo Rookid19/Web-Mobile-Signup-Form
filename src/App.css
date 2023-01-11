@@ -11,6 +11,8 @@
 /* changing all placeholder color */
 ::-webkit-input-placeholder {
   color: var(--credet-grey);
+  font-size: 13px;
+  align-self: center;
 }
 .App {
   display: flex;
@@ -24,7 +26,8 @@
   padding-inline: 30px;
 }
 .step {
-  color: blue;
+  color: var(--credet-grey);
+  font-size: 13px;
 }
 .title {
   font-size: 20px;
@@ -37,7 +40,7 @@
   background-color: var(--credet-light-grey);
   border: none;
   border-radius: 5px;
-  font-size: 13px;
+  font-size: 20px;
   font-family: "polysans-regular";
   padding-left: 20px;
 }
@@ -52,4 +55,8 @@
   border-right: 15px solid transparent;
   outline: none;
 }
-
+#country-code {
+  font-family: "polysans-regular";
+  font-size: 20px;
+  margin-right: 5px;
+}
