@@ -14,6 +14,12 @@
   font-size: 13px;
   align-self: center;
 }
+
+.custom-input:focus {
+  outline: none !important;
+  border: 2px solid var(--credet-green);
+}
+
 .App {
   display: flex;
   align-self: center;
@@ -43,6 +49,7 @@
   font-size: 20px;
   font-family: "polysans-regular";
   padding-left: 20px;
+  border-color: red;
 }
 .dropdown-input {
   height: 33px;
@@ -59,4 +66,24 @@
   font-family: "polysans-regular";
   font-size: 20px;
   margin-right: 5px;
+}
+.button {
+  height: 33px;
+  width: 100%;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  color: var(--credet-white);
+  background-color: var(--credet-green);
+  font-family: "polysans-regular";
+}
+.terms {
+  font-size: 12px;
+  font-family: "polysans-regular";
+  color: var(--credet-grey);
+  line-height: 15px;
+}
+.terms > u {
+  color: var(--credet-black);
 }

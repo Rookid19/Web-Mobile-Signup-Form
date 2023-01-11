@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import useForm from "../../hooks/useForm";
+import CustomButton from "../CustomButton/CustomButton";
 import CustomInput from "../CustomInput/CustomInput";
 import "./Phone.css";
 
@@ -58,6 +59,11 @@ function Phone() {
           maxLength={countryCode === "+1" ? 10 : 9}
         />
       </div>
+      <div className="terms">
+        By continuing, I understand and agree to Credet’s <u>Privacy Policy</u>{" "}
+        and <u>Terms of Use</u> for creating a Credet Account
+      </div>
+      <CustomButton />
     </div>
   );
 }
