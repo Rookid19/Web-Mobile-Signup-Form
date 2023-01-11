@@ -11,6 +11,7 @@ function CustomInput({ placeholder, type, label, ...props }) {
         style={{
           backgroundColor: type === "phone" && "white",
           paddingInline: type === "phone" ? 5 : 15,
+          fontSize: type === "phone" ? 28 : 15,
         }}
       />
     </div>

@@ -20,7 +20,7 @@ const useForm = () => {
       const { name, value } = e.target;
       setValues({
         ...values,
-        [name]: value,
+        [name]: name === "phone" ? value.replace(/\D/g, "") : value,
       });
     },
     [values]

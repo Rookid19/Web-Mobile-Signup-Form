@@ -34,7 +34,7 @@ function Phone() {
     <div>
       <span className="step">Step 1 of 6</span>
       <div className="title">Let's start with phone</div>
-      <div className="sub-title">
+      <div className="label">
         Select your country and enter your phone number
       </div>
       <select
@@ -47,17 +47,24 @@ function Phone() {
           </option>
         ))}
       </select>
-      <div style={{ display: "flex" }}>
-        <p id="country-code">{countryCode}</p>
-        <CustomInput
-          autoFocus
-          type="phone"
-          name="phone"
-          placeholder="Phone number"
-          value={countryCode === "+1" ? us_phone : gh_phone}
-          onChange={handleOnchange}
-          maxLength={countryCode === "+1" ? 10 : 9}
-        />
+      <div
+        style={{
+          display: "flex",
+          alignItems: "center",
+        }}
+      >
+        <span id="country-code">{countryCode}</span>
+        <div>
+          <CustomInput
+            autoFocus
+            type="phone"
+            name="phone"
+            placeholder="Phone number"
+            value={countryCode === "+1" ? us_phone : gh_phone}
+            onChange={handleOnchange}
+            maxLength={countryCode === "+1" ? 10 : 9}
+          />
+        </div>
       </div>
       <div className="terms">
         By continuing, I understand and agree to Credet’s <u>Privacy Policy</u>{" "}

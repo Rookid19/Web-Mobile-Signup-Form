@@ -27,32 +27,30 @@
   margin: auto;
   width: 300px;
   overflow: hidden;
-  /* background-color: var(--credet-green); */
-  /* background-color: red; */
   padding-inline: 30px;
 }
 .step {
   color: var(--credet-grey);
-  font-size: 13px;
+  font-size: 15px;
 }
 .title {
-  font-size: 20px;
+  font-size: 28px;
   font-family: "polysans-medium";
+  margin-block: 15px;
 }
 .custom-input {
   box-sizing: border-box;
   width: 100%;
-  height: 33px;
+  height: 43px;
   background-color: var(--credet-light-grey);
   border: none;
   border-radius: 5px;
-  font-size: 20px;
   font-family: "polysans-regular";
   padding-left: 20px;
   border-color: red;
 }
 .dropdown-input {
-  height: 33px;
+  height: 43px;
   background-color: var(--credet-light-grey);
   border: none;
   border-radius: 20px;
@@ -61,29 +59,42 @@
   padding-inline: 15px;
   border-right: 15px solid transparent;
   outline: none;
+  margin-bottom: 30px;
+  margin-top: 5px;
 }
 #country-code {
   font-family: "polysans-regular";
-  font-size: 20px;
+  font-size: 28px;
   margin-right: 5px;
+ margin-top: 15px;
 }
 .button {
-  height: 33px;
+  height: 42px;
   width: 100%;
   border-radius: 20px;
   border: none;
   cursor: pointer;
-  font-size: 14px;
+  font-size: 16px;
   color: var(--credet-white);
   background-color: var(--credet-green);
   font-family: "polysans-regular";
 }
 .terms {
-  font-size: 12px;
+  font-size: 13px;
   font-family: "polysans-regular";
   color: var(--credet-grey);
-  line-height: 15px;
+  line-height: 20px;
+  margin-bottom: 10px;
+  margin-top: 250px;
+
 }
 .terms > u {
   color: var(--credet-black);
+}
+
+.label {
+  font-family: "polysans-regular";
+  font-size: 16px;
+  color: var(--credet-grey);
+  margin-bottom: 10px;
 }
