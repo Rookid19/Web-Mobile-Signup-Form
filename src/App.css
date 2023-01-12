@@ -28,6 +28,7 @@
   width: 300px;
   overflow: hidden;
   padding-inline: 30px;
+  /* background-color: red; */
 }
 .step {
   color: var(--credet-grey);
@@ -40,7 +41,8 @@
 }
 .custom-input {
   box-sizing: border-box;
-  width: 100%;
+  width: 300px;
+  /* max-width: max-content; */
   height: 43px;
   background-color: var(--credet-light-grey);
   border: none;
@@ -97,4 +99,10 @@
   font-size: 16px;
   color: var(--credet-grey);
   margin-bottom: 10px;
+}
+
+#resend-code{
+  font-family: "polysans-regular";
+  font-size: 16px;
+
 }

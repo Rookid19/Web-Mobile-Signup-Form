@@ -2,7 +2,7 @@ import React from "react";
 
 function CustomInput({ placeholder, type, label, ...props }) {
   return (
-    <div>
+    <div >
       <p>{label}</p>
       <input
         {...props}
