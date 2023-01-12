@@ -10,8 +10,8 @@ function Step4() {
     useForm();
 
   const nav = () => {
-    window.history.pushState({ id: 4 }, "", "");
-    setPageIndex(5);
+    window.history.pushState({ id: 5}, "", "");
+    setPageIndex(6);
   };
 
   // countries

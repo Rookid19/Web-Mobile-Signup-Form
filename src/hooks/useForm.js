@@ -6,6 +6,7 @@ const useForm = () => {
     password: "",
     phone: "",
     region: "",
+    ssn: "",
   });
 
   const [errors, setErrors] = useState({});

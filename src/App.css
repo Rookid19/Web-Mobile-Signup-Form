@@ -42,7 +42,6 @@
 .custom-input {
   box-sizing: border-box;
   width: 300px;
-  /* max-width: max-content; */
   height: 43px;
   background-color: var(--credet-light-grey);
   border: none;
