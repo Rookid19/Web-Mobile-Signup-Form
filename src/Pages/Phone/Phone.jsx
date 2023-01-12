@@ -33,6 +33,11 @@ function Phone() {
   let us_phone = values.phone.replace(/^(\d{3})(\d{3})(\d{4})/, "$1-$2-$3");
   let gh_phone = values.phone.replace(/^(\d{3})(\d{3})(\d{3})/, "$1-$2-$3");
 
+  const nav = () => {
+    window.history.pushState({ id: 1 }, "", "");
+    setPageIndex(2);
+  };
+
   return (
     <div>
       <span className="step">Step 1 of 6</span>
@@ -73,7 +78,7 @@ function Phone() {
         By continuing, I understand and agree to Credet’s <u>Privacy Policy</u>{" "}
         and <u>Terms of Use</u> for creating a Credet Account
       </div>
-      <CustomButton onClick={() => setPageIndex(2)} />
+      <CustomButton onClick={nav} />
     </div>
   );
 }

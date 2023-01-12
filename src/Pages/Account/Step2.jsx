@@ -1,9 +1,13 @@
-import React from 'react'
+import React from "react";
+import CustomButton from "../../components/CustomButton/CustomButton";
+import useAuth from "../../hooks/useAuth";
 
 function Step2() {
-  return (
-    <div>Step2</div>
-  )
+  // const { pageIndex, setPageIndex } = useAuth();
+
+  return <div>Step2
+    <CustomButton />
+  </div>;
 }
 
-export default Step2
+export default Step2;
