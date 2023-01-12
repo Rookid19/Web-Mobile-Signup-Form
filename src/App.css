@@ -50,6 +50,8 @@
   font-family: "polysans-regular";
   padding-left: 20px;
   border-color: red;
+  border-right: 15px solid transparent;
+
 }
 .dropdown-input {
   height: 43px;
@@ -64,12 +66,14 @@
   margin-bottom: 30px;
   margin-top: 5px;
 }
+
 #country-code {
   font-family: "polysans-regular";
   font-size: 28px;
   margin-right: 5px;
  margin-top: 30px;
 }
+
 .button {
   height: 42px;
   width: 100%;

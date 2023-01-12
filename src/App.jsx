@@ -3,6 +3,7 @@ import "./App.css";
 import useAuth from "./hooks/useAuth";
 import Step2 from "./Pages/Account/Step2";
 import Step3 from "./Pages/Account/Step3";
+import Step4 from "./Pages/Account/Step4";
 import Phone from "./Pages/Phone/Phone";
 import VerifyPhone from "./Pages/Phone/VerifyPhone";
 
@@ -24,6 +25,8 @@ function App() {
         <Step2 />
       ) : pageIndex === 4 ? (
         <Step3 />
+      ) : pageIndex === 5 ? (
+        <Step4 />
       ) : null}
     </div>
   );
