@@ -1,6 +1,7 @@
 import React from "react";
 import "./App.css";
 import useAuth from "./hooks/useAuth";
+import Step2 from "./Pages/Account/Step2";
 import Step3 from "./Pages/Account/Step3";
 import Phone from "./Pages/Phone/Phone";
 import VerifyPhone from "./Pages/Phone/VerifyPhone";
@@ -15,7 +16,15 @@ function App() {
 
   return (
     <div className="App">
-      {pageIndex === 1 ? <Phone /> : pageIndex === 2 ? <VerifyPhone /> : <Step3 />}
+      {pageIndex === 1 ? (
+        <Phone />
+      ) : pageIndex === 2 ? (
+        <VerifyPhone />
+      ) : pageIndex === 3 ? (
+        <Step2 />
+      ) : pageIndex === 4 ? (
+        <Step3 />
+      ) : null}
     </div>
   );
 }

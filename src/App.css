@@ -68,7 +68,7 @@
   font-family: "polysans-regular";
   font-size: 28px;
   margin-right: 5px;
- margin-top: 15px;
+ margin-top: 30px;
 }
 .button {
   height: 42px;
@@ -99,6 +99,7 @@
   font-size: 16px;
   color: var(--credet-grey);
   margin-bottom: 10px;
+  margin-top: 20px;
 }
 
 #resend-code{
