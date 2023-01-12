@@ -1,9 +1,24 @@
-import React from "react";
+import React, { useEffect } from "react";
 import CustomInput from "../../components/CustomInput/CustomInput";
+import useAuth from "../../hooks/useAuth";
 import useForm from "../../hooks/useForm";
 
 function Step5() {
   const { values, handleOnchange } = useForm();
+
+  const { setPageIndex } = useAuth();
+
+  const nav = () => {
+    window.history.pushState({ id: 6 }, "", "");
+    setPageIndex(7);
+  };
+
+  useEffect(() => {
+    if (values.ssn.length === 4) {
+      nav();
+    }
+  }, [values]);
+
   return (
     <div>
       <span className="step">Step 5 of 6</span>
