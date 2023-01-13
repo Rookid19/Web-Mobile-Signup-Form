@@ -1,12 +1,21 @@
+import Tooltip from "@mui/material/Tooltip";
 import React from "react";
 import { FaBeer, FiInfo } from "react-icons/fi";
-// FiInfo
-function CustomInput({ placeholder, type, label, ...props }) {
+
+function CustomInput({ placeholder, inputType, label, ...props }) {
   return (
     <div>
       <div style={{ display: "flex", alignItems: "center" }}>
         <div className="label">{label}</div>
-        {type === true && <FiInfo style={{ marginTop: 10, marginLeft: 10 }} />}
+        {inputType === true && (
+          <>
+            <Tooltip title="Add" arrow>
+              <div>
+                <FiInfo style={{ marginTop: 14, marginLeft: 10 }} />
+              </div>
+            </Tooltip>
+          </>
+        )}
       </div>
 
       <input
@@ -14,9 +23,9 @@ function CustomInput({ placeholder, type, label, ...props }) {
         className="custom-input"
         placeholder={placeholder}
         style={{
-          backgroundColor: type === "phone" && "white",
-          paddingInline: type === "phone" ? 5 : 15,
-          fontSize: type === "phone" ? 28 : 15,
+          backgroundColor: inputType === "phone" && "white",
+          paddingInline: inputType === "phone" ? 5 : 15,
+          fontSize: inputType === "phone" ? 28 : 15,
         }}
       />
     </div>

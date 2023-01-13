@@ -5,8 +5,16 @@ export const AuthContext = createContext({});
 export const AuthProvider = ({ children }) => {
   //page index
   const [pageIndex, setPageIndex] = useState(1);
+  const [userData] = useState([]);
 
-  const memoValue = useMemo(() => ({ pageIndex, setPageIndex }), [pageIndex]);
+  useEffect(() => {
+    console.log(userData);
+  }, [userData, pageIndex]);
+
+  const memoValue = useMemo(
+    () => ({ pageIndex, setPageIndex, userData }),
+    [pageIndex,userData]
+  );
   return (
     <AuthContext.Provider value={memoValue}>{children}</AuthContext.Provider>
   );

@@ -7,16 +7,17 @@ const useForm = () => {
     phone: "",
     region: "",
     ssn: "",
-    pin:""
+    pin: "",
   });
 
   const [errors, setErrors] = useState({});
-  const [valid, setValid] = useState(null);
+  // const [valid, setValid] = useState(null);
 
   //
-  //   useEffect(() => {
-  //     setErrors(validate(values));
-  //   }, [values, validate]);
+  // useEffect(() => {
+  //   console.log(userData.length);
+  //   //     setErrors(validate(values));
+  // }, [values]);
 
   const handleOnchange = useCallback(
     (e) => {
@@ -43,7 +44,7 @@ const useForm = () => {
     setValues,
     errors,
     setErrors,
-    valid,
+    // valid,
     handleOnchange,
   };
 };

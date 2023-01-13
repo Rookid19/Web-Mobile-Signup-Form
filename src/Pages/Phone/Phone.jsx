@@ -10,7 +10,7 @@ function Phone() {
   const [countryCode, setCountryCode] = useState("+1");
   const [valid, setValid] = useState(true);
 
-  const { setPageIndex } = useAuth();
+  const { setPageIndex, userData } = useAuth();
 
   // countries
   const countries = [
@@ -39,7 +39,7 @@ function Phone() {
     } else {
       setValid(true);
     }
-  }, [values]);
+  }, [values, countryCode]);
 
   // seperating phone number with hyphens
   let us_phone = values.phone.replace(/^(\d{3})(\d{3})(\d{4})/, "$1-$2-$3");
@@ -47,6 +47,7 @@ function Phone() {
 
   //navigation to next page
   const nav = () => {
+    userData.push({ phone: countryCode + values.phone });
     window.history.pushState({ id: 1 }, "", "");
     setPageIndex(2);
   };
@@ -78,7 +79,7 @@ function Phone() {
         <div>
           <CustomInput
             autoFocus
-            type="phone"
+            inputType="phone"
             name="phone"
             placeholder="Phone number"
             value={countryCode === "+1" ? us_phone : gh_phone}

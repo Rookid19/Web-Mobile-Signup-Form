@@ -1,24 +1,26 @@
-import React, { useEffect, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import CustomInput from "../../components/CustomInput/CustomInput";
 import useAuth from "../../hooks/useAuth";
-
 
 function VerifyPhone() {
   const [verifyPhone, setVerifyPhone] = useState("");
 
   const { setPageIndex } = useAuth();
 
+  // const { values, setValues, handleOnchange } = useForm();
+
   //browser back navigation function
-  const nav = () => {
+  const nav = useCallback(() => {
     window.history.pushState({ id: 2 }, "", "");
     setPageIndex(3);
-  };
+  }, [setPageIndex]);
 
   useEffect(() => {
     if (verifyPhone.length === 4) {
       nav();
     }
-  }, [verifyPhone]);
+  }, [verifyPhone, nav]);
+
   return (
     <div>
       <span className="step">Step 1 of 6</span>
