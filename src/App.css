@@ -50,7 +50,6 @@
   padding-left: 20px;
   border-color: red;
   border-right: 15px solid transparent;
-
 }
 .dropdown-input {
   height: 43px;
@@ -70,7 +69,7 @@
   font-family: "polysans-regular";
   font-size: 28px;
   margin-right: 5px;
- margin-top: 30px;
+  margin-top: 30px;
 }
 
 .button {
@@ -91,7 +90,6 @@
   line-height: 20px;
   margin-bottom: 10px;
   margin-top: 250px;
-
 }
 .terms > u {
   color: var(--credet-black);
@@ -105,8 +103,8 @@
   margin-top: 20px;
 }
 
-#resend-code{
+#resend-code {
   font-family: "polysans-regular";
   font-size: 16px;
-
 }
+

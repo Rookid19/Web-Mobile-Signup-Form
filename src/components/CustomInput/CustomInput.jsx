@@ -9,7 +9,11 @@ function CustomInput({ placeholder, inputType, label, ...props }) {
         <div className="label">{label}</div>
         {inputType === true && (
           <>
-            <Tooltip title="Add" arrow>
+            <Tooltip
+              title="Password must be at least 8 characters and include at least one number  and one letter (and an uppercase letter)"
+              arrow
+              placement="top"
+            >
               <div>
                 <FiInfo style={{ marginTop: 14, marginLeft: 10 }} />
               </div>

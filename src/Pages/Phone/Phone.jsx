@@ -85,6 +85,7 @@ function Phone() {
             value={countryCode === "+1" ? us_phone : gh_phone}
             onChange={handleOnchange}
             maxLength={countryCode === "+1" ? 10 : 9}
+   
           />
         </div>
       </div>
