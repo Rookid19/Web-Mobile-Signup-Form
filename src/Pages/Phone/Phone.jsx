@@ -8,6 +8,7 @@ import useAuth from "../../hooks/useAuth";
 function Phone() {
   //declaring variables
   const [countryCode, setCountryCode] = useState("+1");
+  const [valid, setValid] = useState(false);
 
   const { setPageIndex } = useAuth();
 
@@ -18,8 +19,7 @@ function Phone() {
   ];
 
   //useForm hook
-  const { values, setValues, errors, setErrors, valid, handleOnchange } =
-    useForm();
+  const { values, setValues, errors, setErrors, handleOnchange } = useForm();
 
   // setting text input to null if the user select a different country
   useEffect(() => {
@@ -33,6 +33,7 @@ function Phone() {
   let us_phone = values.phone.replace(/^(\d{3})(\d{3})(\d{4})/, "$1-$2-$3");
   let gh_phone = values.phone.replace(/^(\d{3})(\d{3})(\d{3})/, "$1-$2-$3");
 
+  //navigation to next page
   const nav = () => {
     window.history.pushState({ id: 1 }, "", "");
     setPageIndex(2);
