@@ -8,7 +8,7 @@ import useAuth from "../../hooks/useAuth";
 function Phone() {
   //declaring variables
   const [countryCode, setCountryCode] = useState("+1");
-  const [valid, setValid] = useState(false);
+  const [valid, setValid] = useState(true);
 
   const { setPageIndex } = useAuth();
 
@@ -19,7 +19,7 @@ function Phone() {
   ];
 
   //useForm hook
-  const { values, setValues, errors, setErrors, handleOnchange } = useForm();
+  const { values, setValues, handleOnchange } = useForm();
 
   // setting text input to null if the user select a different country
   useEffect(() => {
@@ -28,6 +28,18 @@ function Phone() {
       phone: "",
     });
   }, [countryCode]);
+
+  //form validation
+  useEffect(() => {
+    if (
+      (countryCode === "+1" && values.phone.length === 10) ||
+      (countryCode === "+233" && values.phone.length === 9)
+    ) {
+      setValid(false);
+    } else {
+      setValid(true);
+    }
+  }, [values]);
 
   // seperating phone number with hyphens
   let us_phone = values.phone.replace(/^(\d{3})(\d{3})(\d{4})/, "$1-$2-$3");
@@ -79,7 +91,7 @@ function Phone() {
         By continuing, I understand and agree to Credet’s <u>Privacy Policy</u>{" "}
         and <u>Terms of Use</u> for creating a Credet Account
       </div>
-      <CustomButton onClick={nav} />
+      <CustomButton onClick={nav} disabled={valid} />
     </div>
   );
 }
