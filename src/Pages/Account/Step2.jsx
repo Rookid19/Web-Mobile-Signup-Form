@@ -3,15 +3,19 @@ import CustomButton from "../../components/CustomButton/CustomButton";
 import CustomInput from "../../components/CustomInput/CustomInput";
 import useAuth from "../../hooks/useAuth";
 import useForm from "../../hooks/useForm";
+import validate from "../../utils/Validate";
 
 function Step2() {
   // const [confirm]
-  const { setPageIndex } = useAuth();
-  const { values, handleOnchange } = useForm();
+  const { setPageIndex, userData } = useAuth();
+  const { values, handleOnchange, handleSubmit, errors } = useForm(validate);
 
   const nav = () => {
-    window.history.pushState({ id: 3 }, "", "");
-    setPageIndex(4);
+    userData.email = values.email;
+    userData.password = values.password;
+    // window.history.pushState({ id: 3 }, "", "");
+    // setPageIndex(4);
+    handleSubmit();
   };
 
   return (
@@ -39,13 +43,12 @@ function Step2() {
         label="Confirm Password"
         name="password"
         type="password"
-        value={values.password}
+        value={values.confirmPassword}
         onChange={handleOnchange}
       />
-      {/* <button data-tip data-for="registerTip">
-        Register
-      </button> */}
-
+      {errors.confirmPassword && (
+        <span className="error">{errors.confirmPassword}</span>
+      )}
       <br />
       <CustomButton onClick={nav} />
     </div>

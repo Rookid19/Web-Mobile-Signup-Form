@@ -5,7 +5,7 @@ export const AuthContext = createContext({});
 export const AuthProvider = ({ children }) => {
   //page index
   const [pageIndex, setPageIndex] = useState(1);
-  const [userData] = useState([]);
+  const [userData] = useState({});
 
   useEffect(() => {
     console.log(userData);

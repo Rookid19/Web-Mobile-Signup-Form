@@ -1,9 +1,10 @@
 import { useCallback, useEffect, useState } from "react";
 
-const useForm = () => {
+const useForm = (validate) => {
   const [values, setValues] = useState({
     email: "",
     password: "",
+    confirmPassword: "",
     phone: "",
     region: "",
     ssn: "",
@@ -39,13 +40,17 @@ const useForm = () => {
     }
   }, [values]);
 
+  const handleSubmit = () => {
+    setErrors(validate(values));
+  };
+
   return {
     values,
     setValues,
     errors,
     setErrors,
-    // valid,
     handleOnchange,
+    handleSubmit
   };
 };
 

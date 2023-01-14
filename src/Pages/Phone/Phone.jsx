@@ -47,7 +47,8 @@ function Phone() {
 
   //navigation to next page
   const nav = () => {
-    userData.push({ phone: countryCode + values.phone });
+    // userData.push({ phone: countryCode + values.phone });
+    userData.phone = countryCode + values.phone;
     window.history.pushState({ id: 1 }, "", "");
     setPageIndex(2);
   };
@@ -85,7 +86,6 @@ function Phone() {
             value={countryCode === "+1" ? us_phone : gh_phone}
             onChange={handleOnchange}
             maxLength={countryCode === "+1" ? 10 : 9}
-   
           />
         </div>
       </div>
