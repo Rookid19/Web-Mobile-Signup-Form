@@ -4,6 +4,7 @@ import CustomButton from "../../components/CustomButton/CustomButton";
 import CustomInput from "../../components/CustomInput/CustomInput";
 import "./Phone.css";
 import useAuth from "../../hooks/useAuth";
+import validate from "../../utils/Validate";
 
 function Phone() {
   //declaring variables
@@ -19,7 +20,7 @@ function Phone() {
   ];
 
   //useForm hook
-  const { values, setValues, handleOnchange } = useForm();
+  const { values, setValues, handleOnchange } = useForm(validate);
 
   // setting text input to null if the user select a different country
   useEffect(() => {

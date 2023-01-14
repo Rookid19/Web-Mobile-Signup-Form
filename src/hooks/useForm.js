@@ -13,12 +13,10 @@ const useForm = (validate) => {
 
   const [errors, setErrors] = useState({});
   // const [valid, setValid] = useState(null);
-
-  //
-  // useEffect(() => {
-  //   console.log(userData.length);
-  //   //     setErrors(validate(values));
-  // }, [values]);
+  useEffect(() => {
+    // setErrors(validate(values));
+    // console.log("errors ---> " + JSON.stringify(errors));
+  }, [values]);
 
   const handleOnchange = useCallback(
     (e) => {
@@ -43,6 +41,7 @@ const useForm = (validate) => {
   const handleSubmit = () => {
     setErrors(validate(values));
   };
+  console.log("erros---> " + JSON.stringify(errors));
 
   return {
     values,
@@ -50,7 +49,7 @@ const useForm = (validate) => {
     errors,
     setErrors,
     handleOnchange,
-    handleSubmit
+    handleSubmit,
   };
 };
 

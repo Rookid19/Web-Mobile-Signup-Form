@@ -29,6 +29,9 @@ function Step2() {
         value={values.email}
         onChange={handleOnchange}
       />
+       {errors.email && (
+        <span className="error">{errors?.email}</span>
+      )}
       <CustomInput
         label="Password"
         inputType={true}
@@ -37,17 +40,31 @@ function Step2() {
         value={values.password}
         onChange={handleOnchange}
       />
-
+      {errors.passwordRequired && (
+        <div className="error">{errors?.passwordRequired}</div>
+      )}
+      {errors.passwordLength && (
+        <div className="error">{errors?.passwordLength}</div>
+      )}
+        {errors.passwordCaseSenstive && (
+        <div className="error">{errors?.passwordCaseSenstive}</div>
+      )}
+        {errors.passwordNumber && (
+        <div className="error">{errors?.passwordNumber}</div>
+      )}
+        {errors.passwordSpecial && (
+        <div className="error">{errors?.passwordSpecial}</div>
+      )}
       <br />
       <CustomInput
         label="Confirm Password"
-        name="password"
+        name="confirmPassword"
         type="password"
         value={values.confirmPassword}
         onChange={handleOnchange}
       />
       {errors.confirmPassword && (
-        <span className="error">{errors.confirmPassword}</span>
+        <span className="error">{errors?.confirmPassword}</span>
       )}
       <br />
       <CustomButton onClick={nav} />
