@@ -2,13 +2,16 @@ import { useCallback, useEffect, useState } from "react";
 
 const useForm = (validate) => {
   const [values, setValues] = useState({
+    firstname:"",
+    lastname:"",
     email: "randyodoom19@ymail.com",
-    password: "Randy123",
-    confirmPassword: "Randy123",
+    password: "Randy@123",
+    confirmPassword: "Randy@123",
     phone: "",
     region: "",
     ssn: "",
     pin: "",
+    dob: "",
   });
 
   const [errors, setErrors] = useState({});

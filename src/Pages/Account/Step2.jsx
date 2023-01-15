@@ -19,7 +19,7 @@ function Step2() {
   };
 
   useEffect(() => {
-    if (Object.keys(errors).length === 0) {
+    if (Object.keys(errors).length === 1) {
       setValid(false);
       // alert("empty")
     } else {
