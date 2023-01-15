@@ -2,9 +2,9 @@ import { useCallback, useEffect, useState } from "react";
 
 const useForm = (validate) => {
   const [values, setValues] = useState({
-    email: "",
-    password: "",
-    confirmPassword: "",
+    email: "randyodoom19@ymail.com",
+    password: "Randy123",
+    confirmPassword: "Randy123",
     phone: "",
     region: "",
     ssn: "",
@@ -12,10 +12,9 @@ const useForm = (validate) => {
   });
 
   const [errors, setErrors] = useState({});
-  // const [valid, setValid] = useState(null);
+
   useEffect(() => {
-    // setErrors(validate(values));
-    // console.log("errors ---> " + JSON.stringify(errors));
+    setErrors(validate(values));
   }, [values]);
 
   const handleOnchange = useCallback(
@@ -38,9 +37,9 @@ const useForm = (validate) => {
     }
   }, [values]);
 
-  const handleSubmit = () => {
-    setErrors(validate(values));
-  };
+  // const handleSubmit = () => {
+  //   setErrors(validate(values));
+  // };
   console.log("erros---> " + JSON.stringify(errors));
 
   return {
@@ -49,7 +48,8 @@ const useForm = (validate) => {
     errors,
     setErrors,
     handleOnchange,
-    handleSubmit,
+    // handleSubmit,
+    // valid
   };
 };
 

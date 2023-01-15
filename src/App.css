@@ -38,6 +38,7 @@
   font-size: 28px;
   font-family: "polysans-medium";
   margin-block: 15px;
+  width: 300px;
 }
 .custom-input {
   box-sizing: border-box;
@@ -48,7 +49,7 @@
   border-radius: 5px;
   font-family: "polysans-regular";
   padding-left: 20px;
-  border-color: red;
+  /* border-color: red; */
   border-right: 15px solid transparent;
 }
 .dropdown-input {
@@ -107,4 +108,3 @@
   font-family: "polysans-regular";
   font-size: 16px;
 }
-

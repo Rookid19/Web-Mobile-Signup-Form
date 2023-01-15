@@ -2,7 +2,7 @@ import Tooltip from "@mui/material/Tooltip";
 import React from "react";
 import { FaBeer, FiInfo } from "react-icons/fi";
 
-function CustomInput({ placeholder, inputType, label, ...props }) {
+function CustomInput({ placeholder, inputType, label,tooltipTitle, ...props }) {
   return (
     <div>
       <div style={{ display: "flex", alignItems: "center" }}>
@@ -10,7 +10,7 @@ function CustomInput({ placeholder, inputType, label, ...props }) {
         {inputType === true && (
           <>
             <Tooltip
-              title="Password must be at least 8 characters and include at least one number  and one letter (and an uppercase letter)"
+              title={tooltipTitle}
               arrow
               placement="top"
             >
