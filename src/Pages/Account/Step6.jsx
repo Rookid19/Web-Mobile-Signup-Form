@@ -1,9 +1,10 @@
 import React from "react";
 import CustomInput from "../../components/CustomInput/CustomInput";
 import useForm from "../../hooks/useForm";
+import validate from "../../utils/Validate";
 
 function Step6() {
-  const { values, handleOnchange } = useForm();
+  const { values, handleOnchange } = useForm(validate);
 
   return (
     <div>

@@ -2,9 +2,10 @@ import React, { useEffect } from "react";
 import CustomInput from "../../components/CustomInput/CustomInput";
 import useAuth from "../../hooks/useAuth";
 import useForm from "../../hooks/useForm";
+import validate from "../../utils/Validate";
 
 function Step5() {
-  const { values, handleOnchange } = useForm();
+  const { values, handleOnchange } = useForm(validate);
 
   const { setPageIndex } = useAuth();
 

@@ -3,11 +3,12 @@ import CustomButton from "../../components/CustomButton/CustomButton";
 import CustomInput from "../../components/CustomInput/CustomInput";
 import useAuth from "../../hooks/useAuth";
 import useForm from "../../hooks/useForm";
+import validate from "../../utils/Validate";
 
 function Step4() {
   const { setPageIndex } = useAuth();
   const { values, handleOnchange } =
-    useForm();
+    useForm(validate);
 
   const nav = () => {
     window.history.pushState({ id: 5}, "", "");
@@ -15,7 +16,7 @@ function Step4() {
   };
 
   // countries
-  const countries = [
+  const countries = [ 
     { id: 1, country: "US", code: "+1", label: "🇺🇸 United States (+1)" },
     { id: 2, country: "GH", code: "+233", label: "🇬🇭 Ghana (+233)" },
   ];
