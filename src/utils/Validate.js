@@ -4,14 +4,14 @@ export default function Validate(values) {
   //first name validation
   if (!values.firstname.trim()) {
     errors.firstname = "First name is required";
-  } else if (values.firstname.length > 1) {
+  } else if (values.firstname.length < 2) {
     errors.firstnameLength = "First name must be 2 characters long";
   }
 
   //last name validation
   if (!values.lastname.trim()) {
     errors.lastname = "Last name is required";
-  } else if (values.lastname.length > 1) {
+  } else if (values.lastname.length < 2) {
     errors.lastnameLength = "Last name must be 2 characters long";
   }
 
@@ -60,6 +60,14 @@ export default function Validate(values) {
     )
   ) {
     errors.dob = "Wrond Date of birth format";
+  }
+
+  //pay id validation
+  if (!values.payID.trim()) {
+    errors.payID = "Pay ID is required";
+  } else if (values.payID.length < 2 || values.payID.length > 15) {
+    errors.payID =
+      "Pay ID should be at least 2 character and at most 15 characters";
   }
 
   return errors;
