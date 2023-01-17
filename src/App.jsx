@@ -1,4 +1,5 @@
 import React from "react";
+import GoogleMapsSearch from "./GoogleMapsSearch";
 import "./App.css";
 import useAuth from "./hooks/useAuth";
 import Step2 from "./Pages/Account/Step2";
