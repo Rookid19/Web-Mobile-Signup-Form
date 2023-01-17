@@ -7,4 +7,4 @@ divested of its trade secrets, irrespective of what has been
 deposited with the U.S. Copyright Office.
 
 The MVP project can not be copied and/or distributed without the express
-permission of Credt, Inc. license@cred.app.
+permission of Credt, Inc. license@credet.app.
